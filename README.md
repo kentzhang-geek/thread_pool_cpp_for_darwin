@@ -7,4 +7,6 @@ libthreadpool.cpp
 
 All documents in libthreadpool.hpp
 
+Unit test in ut.cc
+
 Kent Zhang
