@@ -8,6 +8,9 @@ class thread_A : thread_handle {
 public:
 	char * xxx;
 	thread_A(char *p ) {xxx = p;}
+	~thread_A() {
+		std::cout << "dectruct  <==  " << this->xxx << std::endl;
+	}
 	int run_once() {
 		sleep(1);
 		pthread_mutex_lock(&mu);

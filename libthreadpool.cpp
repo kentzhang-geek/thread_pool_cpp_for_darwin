@@ -24,6 +24,12 @@ thread_handle::thread_handle() {
 	bzero(this->name, 100);
 }
 
+thread_handle::~thread_handle() {
+	free(this->name);
+	this->name = NULL;
+	return ;
+}
+
 /**
  * c fucntions that get actors move
  * @param  p thread pool instance
@@ -36,8 +42,10 @@ void * pthread_arena(void *p) {
 	do
 	{
 		actor_get = pool->require_actor();
-		if (NULL != actor_get)
+		if (NULL != actor_get) {
 			actor_get->run();
+			delete actor_get;
+		}
 	} while (NULL != actor_get);
 
 	pthread_exit(NULL);

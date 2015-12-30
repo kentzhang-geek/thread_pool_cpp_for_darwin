@@ -17,7 +17,7 @@
 #include <stdio.h>
 
 /**
- * inherit this class and overwrite run_once or run_loop to run your code in thread
+ * inherit this class and overwrite run_once or run_loop to run your code in thread.
  * 
  * Notice that run_loop will only be called once, your should realize your own loop
  * in run_loop if needed
@@ -27,7 +27,8 @@ public:
 	void * thread_ctx;
 	char * name;
 	int run();
-	thread_handle();
+	thread_handle() ;
+	virtual ~thread_handle();
 	virtual int run_once() {return 0;};
 	virtual int run_loop() {return 0;};
 };
