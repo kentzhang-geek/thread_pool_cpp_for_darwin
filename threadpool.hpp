@@ -36,8 +36,13 @@ public:
 
 /**
  * this class realize a thread pool, all thread begin to run once your created pool, 
- * threads will wait for actors require arena
- * Once an actor is ready for play his role, pool will add actor to queue and post a
+ * threads will wait for actors 
+ * 
+ * Usage : Create pool use constructor, and add thread to pool use method add_actor.
+ * could not remove thread once added to pool. And will delete thread once method 
+ * run_once and method run_loop returns.
+ * 
+ * Description : Once an actor is ready for play his role, pool will add actor to queue and post a
  * semphore to acknowledge arena. Then arena will get semphore and get an actor from
  * queue to run.
  *
