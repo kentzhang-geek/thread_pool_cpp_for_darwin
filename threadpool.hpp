@@ -18,6 +18,7 @@
 
 /**
  * inherit this class and overwrite run_once or run_loop to run your code in thread.
+ * Also you can overwrite destructor if needed.
  * 
  * Notice that run_loop will only be called once, your should realize your own loop
  * in run_loop if needed
