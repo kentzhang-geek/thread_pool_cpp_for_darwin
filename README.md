@@ -1,7 +1,7 @@
 CPP thread pool for mac
 ===========================
 
-This code only support Mac OS yet because required semaphore APIs.
+This code now support Mac OS and Linux .
 Only 2 source file import to your project then use thread pool easy and simple:
 threadpool.hpp
 libthreadpool.cpp

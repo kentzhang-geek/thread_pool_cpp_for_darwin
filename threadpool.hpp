@@ -13,6 +13,15 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+
+/*
+ * For Linux platform supportfd
+ */
+#ifdef __linux__
+#include <fcntl.h>
+#include <sys/stat.h>
+#endif
+ 
 #include <semaphore.h>
 #include <stdio.h>
 
